@@ -10,5 +10,5 @@ EXPOSE 9982
 
 COPY ["roc_test_4-0.0.1-SNAPSHOT.jar", "/opt"]
 
-RUN java -jar /opt/roc_test_4-0.0.1-SNAPSHOT.jar
+ENTRYPOINT [ "java", "-jar", "/opt/roc_test_4-0.0.1-SNAPSHOT.jar" ]
 
