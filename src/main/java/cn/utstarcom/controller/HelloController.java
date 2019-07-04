@@ -26,4 +26,9 @@ public class HelloController {
     public String play(@RequestParam(value = "game", defaultValue = "basketball") String game) {
         return " I like to play " + game;
     }
+
+    @RequestMapping("/test")
+    public String test(@RequestParam(value = "aaa", defaultValue = "basketball") String aaa) {
+        return " test  " + aaa;
+    }
 }
