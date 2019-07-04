@@ -17,8 +17,13 @@ public class HelloController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/greeting")
-    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+    public Greeting greeting(@RequestParam(value = "name", defaultValue = "UD") String name) {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
+    }
+
+    @RequestMapping("/play")
+    public String play(@RequestParam(value = "game", defaultValue = "basketball") String game) {
+        return " I like to play " + game;
     }
 }
